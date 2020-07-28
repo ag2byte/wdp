@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='q.css')}}" />
+
+{% endblock %}
+{% block js %}
+<script>
+    function btnclick() {
+        console.log('clicked');
+        alert('Error in your solution stoopid');
+    }
+</script>
+{% endblock %}
+{%block question %}
+<p>
+<h4>Write a program to take n no of elements and sort them in nlogn time </h4> <br>
+Sample Input <br>
+5<br>
+4 3 2 6 3 <br>
+Sample Output <br>
+2 3 3 4 6<br>
+</p>
+{% endblock %}
+{%block input %}
+<textarea name="inputtext" id="textarea" cols="81" rows="34"></textarea>
+{% endblock %}
+{% block button %}
+<a href="">
+    <button class="submit" onclick="btnclick()">Submit</button>
+</a>
+{%endblock%}

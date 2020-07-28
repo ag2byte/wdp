@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block js %}
+
+<script>
+    function btnclick() {
+        console.log('clicked');
+        alert('Solution correct');
+
+
+    }
+</script>
+{% endblock %}
+{%block question %}
+<p>
+<h4>Write a program to take n no of elements and display in reverse order </h4> <br>
+Sample Input <br>
+5<br>
+4 3 2 6 3 <br>
+Sample Output <br>
+3 6 2 3 4 <br>
+</p>
+{% endblock %}
+{%block input %}
+<textarea name="inputtext" id="textarea" cols="81" rows="34" spellcheck="false"></textarea>
+{% endblock %}
+{% block button %}
+<a href="">
+    <button class="submit" onclick="btnclick()">Submit</button>
+</a>
+{%endblock%}

@@ -1,0 +1,74 @@
+<!-- clock using js  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function curTime() {
+            var now = new Date();
+            var clock = document.getElementById('clock');
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            h = updateTime(h);
+            m = updateTime(m);
+            s = updateTime(s);
+            document.getElementById('clock').innerText = h + "." + m + "." + s;
+            setTimeout(curTime, 1000);
+        }
+        function updateTime(t) {
+            if (t < 10)
+                return "0" + t;
+            else
+                return t;
+
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            var colors = ["272f38", "#248c8b", "#d60f90", "#d6510f", "#0fd637"];
+            let count = 0;
+            setInterval(() => {
+                document.querySelector('body').style.background = colors[count];
+                count++;
+                if (count === colors.length)
+                    count = 0;
+            }, 3000);
+        })
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <title>clocks-js</title>
+
+</head>
+
+
+<body onload="curTime()">
+
+    <div id="clock"> </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background: #272f38;
+            color: white;
+            font-family: Quicksand, Arial;
+            transition: background .5s
+        }
+
+        #clock {
+            position: absolute;
+            font-size: 80px;
+            letter-spacing: 8px;
+            padding-left: 40%;
+            padding-top: 350px;
+        }
+    </style>
+</body>
+
+</html>

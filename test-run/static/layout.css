@@ -1,0 +1,63 @@
+.container{
+    
+    margin-top: 100px;
+    margin-left: 25px;
+    display: flex;
+    height: 850px;
+    flex-direction: row;
+    margin-right: 25px;
+    justify-content: space-between;
+    font-family: 'Fira Code';
+    
+    
+}
+.question{
+    position: relative;
+    font-size: 20px;
+    width:48%; 
+    padding-left: 20px;
+    outline-color: black;
+    outline-style: solid;
+    outline-width: 1px;
+}
+.input{
+    position: relative;
+    font-size: 44pt;
+    width: 48%;
+    
+    
+}
+a{
+    text-decoration: none;
+}
+.submit{
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    margin-left: 1900px;
+    background-color: #fafeff;
+    box-shadow: -3px -3px 5px #ffffff80,3px 3px 15px #00000080;
+    border-radius: 15px;
+    font-family: "Fira Code";
+    font-size: 22px;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding-top: 8px;
+    color: black;
+}
+.submit:hover{
+    box-shadow: -5px -5px 10px #ffffff80, 5px 5px 20px #00000080;
+}
+.submit:active{
+    box-shadow:inset -3px -3px 5px #ffffff80,inset 3px 3px 15px #00000080;
+    
+}
+
+#textarea{
+    position: relative;
+    margin:5px;
+    font-size: 20px;
+    box-shadow: -3px -3px 5px #ffffff80,3px 3px 15px #00000080;
+    
+}
